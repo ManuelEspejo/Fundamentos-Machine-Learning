@@ -50,4 +50,7 @@ Para aprovechar este repositorio necesitarás lo siguiente:
 
 Si tienes preguntas o te gustaría compartir tus avances, no dudes en **abrir un issue** en este repositorio. También puedes contactarme a mi correo: [...]
 
+
+
+---
 ¡AH! Lo más importante... ¡Explora, aprende y empieza a aplicar Machine Learning en tu área de interés!🔥​🔥​
