@@ -121,6 +121,3 @@ def extract_file_id(url):
     elif 'drive.google.com' in parsed_url.netloc and '/file/d/' in parsed_url.path:
         return parsed_url.path.split('/')[3]
     return None
-
-# Prueba de la función
-download_data('https://drive.google.com/file/d/1FqMwy0E4O7evqMYIm23y2UjI8QwgbQ9h/view?usp=sharing')
