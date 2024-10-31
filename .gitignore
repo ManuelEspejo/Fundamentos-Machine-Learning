@@ -1,0 +1,23 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+
+# Archivos de configuración y secretos
+.env
+
+# Datos
+/data
+
+# Notebooks convertidos a otros formatos
+notebooks/*.html
+notebooks/*.pdf
+
+# Archivos de logs o temporales
+*.log
+*.tmp
+
+# Archivos de Jupyter Notebook exportados a otros formatos
+*.checkpoint
+.DS_Store              # Archivos ocultos de Mac
