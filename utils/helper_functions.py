@@ -101,19 +101,24 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     return data_dir
 
 
+
 def extract_file_id(url):
     """
     Extrae el ID del archivo desde una URL de Google Drive.
-    
+
     Args:
         url (str): URL de Google Drive.
-    
+
     Returns:
         str: ID del archivo, o None si no se encuentra un ID válido.
     """
     parsed_url = urlparse(url)
-    if 'id' in parse_qs(parsed_url.query):
-        return parse_qs(parsed_url.query)['id'][0]
-    elif 'drive.google.com' in parsed_url.netloc:
-        return parsed_url.path.split('/')[-2]
+    query_params = parse_qs(parsed_url.query)
+    
+    # Buscar el ID en los parámetros de la URL
+    if 'id' in query_params:
+        return query_params['id'][0]
+    # Buscar el ID en la ruta de la URL, en el formato "/d/<file_id>/"
+    elif 'drive.google.com' in parsed_url.netloc and '/file/d/' in parsed_url.path:
+        return parsed_url.path.split('/')[3]
     return None
