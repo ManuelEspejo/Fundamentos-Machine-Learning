@@ -14,6 +14,7 @@ En este repositorio encontrarás:
 - **Recursos adicionales:** Mis lecturas recomendadas, cursos y vídeos favoritos para seguir aprendiendo.
 - **Conceptos clave:** Explicaciones claras y concisas de los términos más importantes en Machine Learning, como la diferencia entre IA, Machine Learning y Deep Learning, tipos de aprendizaje, y más.
 - **Ejemplos prácticos:** Aplicaciones de Machine Learning en sectores variados (marketing, finanzas, personalización de recomendaciones, etc.).
+- **Glosario:** Explicaciones claras y concisas de los términos clave que aparecen en los notebooks.
 
 ## 🚀 ¿Para quién es este repositorio?
 
@@ -48,9 +49,7 @@ Para aprovechar este repositorio necesitarás lo siguiente:
 
 (En proceso)
 
-Si tienes preguntas o te gustaría compartir tus avances, no dudes en **abrir un issue** en este repositorio. También puedes contactarme a mi correo: [...]
-
-
+Si tienes preguntas o te gustaría compartir tus avances, no dudes en **abrir un issue** en este repositorio. También puedes contactarme a mi correo:[manuelesph@gmail.com](mailto:manuelesph@gmail.com), estaré encantado de resolver tus dudas😊​.
 
 ---
 ¡AH! Lo más importante... ¡Explora, aprende y empieza a aplicar Machine Learning en tu área de interés!🔥​🔥​
