@@ -35,15 +35,15 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     
     # Procesar el enlace o ID de archivo
     if 'drive.google.com' in url_or_id:
-        # Si es un enlace de Google Drive
+        # Si es un enlace de Google Drive, extraer el file_id
         file_id = extract_file_id(url_or_id)
         if file_id is None:
             print("Error: Enlace de Google Drive no válido.")
             return None
         download_url = f'https://drive.google.com/uc?id={file_id}'
     else:
-        # Asumir que es una URL directa a un archivo ZIP
-        download_url = url_or_id
+        # Asumir que es un ID de Google Drive directo o una URL genérica
+        download_url = f'https://drive.google.com/uc?id={url_or_id}' if len(url_or_id) == 33 else url_or_id
     
     # Ruta para guardar el archivo ZIP
     output = os.path.join(data_dir, 'data.zip')
@@ -101,14 +101,13 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     return data_dir
 
 
-
 def extract_file_id(url):
     """
     Extrae el ID del archivo desde una URL de Google Drive.
-
+    
     Args:
         url (str): URL de Google Drive.
-
+    
     Returns:
         str: ID del archivo, o None si no se encuentra un ID válido.
     """
@@ -122,3 +121,6 @@ def extract_file_id(url):
     elif 'drive.google.com' in parsed_url.netloc and '/file/d/' in parsed_url.path:
         return parsed_url.path.split('/')[3]
     return None
+
+# Prueba de la función
+download_data('https://drive.google.com/file/d/1FqMwy0E4O7evqMYIm23y2UjI8QwgbQ9h/view?usp=sharing')
