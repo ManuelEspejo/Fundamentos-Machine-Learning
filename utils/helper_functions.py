@@ -24,7 +24,13 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     
     # Configurar el directorio de datos según el entorno
     if data_dir is None:
-        data_dir = '/content/data' if in_colab else './data/raw'
+        if in_colab:
+            data_dir = '/content/data'
+        else:
+            # Obtener la ruta del directorio raíz del proyecto
+            current_file = os.path.abspath(__file__)  # Ruta del archivo actual (helper_functions.py)
+            project_root = os.path.dirname(os.path.dirname(current_file))  # Subir dos niveles
+            data_dir = os.path.join(project_root, 'data', 'raw')
     
     # Convertir a ruta absoluta para mejor depuración
     data_dir = os.path.abspath(data_dir)
