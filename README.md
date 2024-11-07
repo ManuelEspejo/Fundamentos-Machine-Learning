@@ -68,6 +68,7 @@ Sin embargo, te recomiendo encarecidamente que te leas el notebook [00_Empieza-a
 
 Esta es la estructura del repositorio, para que te hagas una idea de cómo está organizado:
 
+```plaintext
 ├── README.md
 ├── .gitignore
 ├── requirements.txt
@@ -84,6 +85,8 @@ Esta es la estructura del repositorio, para que te hagas una idea de cómo está
 └── utils/
     ├── helper_functions.py
     └── README.md
+```
+
 
 #### 📄 Descripción de la Organización
 
