@@ -57,7 +57,7 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     try:
         if 'drive.google.com' in download_url:
             print("Descargando desde Google Drive...")
-            gdown.download(download_url, output, quiet=False)
+            gdown.download(download_url, output, quiet=True)
         else:
             print("Descargando desde una URL genérica...")
             response = requests.get(download_url, stream=True)
@@ -95,13 +95,12 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     
     # Listar los archivos extraídos
     archivos = os.listdir(data_dir)
-    print("\nArchivos disponibles en el directorio:")
+    print("\nArchivos disponibles:")
     for archivo in archivos:
-        ruta_completa = os.path.join(data_dir, archivo)
-        tamaño = os.path.getsize(ruta_completa)
+        tamaño = os.path.getsize(os.path.join(data_dir, archivo))
         print(f"- {archivo} ({tamaño} bytes)")
-    
-    return data_dir
+
+    return None
 
 
 def extract_file_id(url):
