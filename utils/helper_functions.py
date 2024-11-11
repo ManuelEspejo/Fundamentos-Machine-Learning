@@ -34,7 +34,6 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     
     # Convertir a ruta absoluta para mejor depuración
     data_dir = os.path.abspath(data_dir)
-    print(f"Directorio de destino: {data_dir}")
     
     # Crear directorio si no existe
     os.makedirs(data_dir, exist_ok=True)
@@ -53,7 +52,6 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
     
     # Ruta para guardar el archivo ZIP
     output = os.path.join(data_dir, 'data.zip')
-    print(f"URL de descarga: {download_url}")
     
     # Descargar el archivo
     try:
@@ -87,7 +85,6 @@ def download_data(url_or_id: str, data_dir=None, keep_zip=False):
         with zipfile.ZipFile(output, 'r') as zip_ref:
             print("Contenido del ZIP:", zip_ref.namelist())
             zip_ref.extractall(data_dir)
-            print(f"Archivos extraídos en: {data_dir}")
     except zipfile.BadZipFile:
         print("Error: El archivo descargado no es un ZIP válido.")
         return None
