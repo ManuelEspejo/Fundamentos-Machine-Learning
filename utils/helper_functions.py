@@ -123,3 +123,68 @@ def extract_file_id(url):
     elif 'drive.google.com' in parsed_url.netloc and '/file/d/' in parsed_url.path:
         return parsed_url.path.split('/')[3]
     return None
+
+def plot_example_relationships():
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    # Configuración general de las gráficas
+    plt.figure(figsize=(12, 10))
+
+    # 1. Variable que aumenta y la satisfacción del cliente también aumenta
+    # Ejemplo: Calidad del Producto (de 0 a 100)
+    np.random.seed(0)  # Para reproducibilidad
+    calidad_producto = np.linspace(0, 100, 100)
+    satisfaccion_cliente_1 = calidad_producto + np.random.normal(0, 10, 100)  # Añadimos ruido
+
+    plt.subplot(2, 2, 1)
+    plt.scatter(calidad_producto, satisfaccion_cliente_1, color='blue')
+    plt.title('Calidad del Producto vs. Satisfacción del Cliente')
+    plt.xlabel('Calidad del Producto')
+    plt.ylabel('Satisfacción del Cliente (0-100)')
+    plt.xlim(0, 100)
+    plt.ylim(0, 100)
+
+    # 2. Variable que disminuye y la satisfacción del cliente aumenta
+    # Ejemplo: Tiempo de Espera en Soporte (Segundos)
+    tiempo_espera = np.linspace(300, 0, 100)  # De 300 a 0 segundos
+    satisfaccion_cliente_2 = 100 - tiempo_espera / 3 + np.random.normal(0, 5, 100)
+
+    plt.subplot(2, 2, 2)
+    plt.scatter(tiempo_espera, satisfaccion_cliente_2, color='green')
+    plt.title('Tiempo de Espera vs. Satisfacción del Cliente')
+    plt.xlabel('Tiempo de Espera (Segundos)')
+    plt.ylabel('Satisfacción del Cliente (0-100)')
+    plt.xlim(0, 300)
+    plt.ylim(0, 100)
+
+    # 3. Variable que aumenta y la satisfacción del cliente disminuye
+    # Ejemplo: Precio del Producto (en USD)
+    precio_producto = np.linspace(0, 200, 100)
+    satisfaccion_cliente_3 = 100 - precio_producto / 2 + np.random.normal(0, 10, 100)
+
+    plt.subplot(2, 2, 3)
+    plt.scatter(precio_producto, satisfaccion_cliente_3, color='red')
+    plt.title('Precio del Producto vs. Satisfacción del Cliente')
+    plt.xlabel('Precio del Producto (USD)')
+    plt.ylabel('Satisfacción del Cliente (0-100)')
+    plt.xlim(0, 200)
+    plt.ylim(0, 100)
+
+    # 4. Variable que disminuye y la satisfacción del cliente disminuye
+    # Ejemplo: Nivel de Personalización (Porcentaje)
+    nivel_personalizacion = np.linspace(100, 0, 100)
+    satisfaccion_cliente_4 = nivel_personalizacion + np.random.normal(0, 10, 100)
+
+    plt.subplot(2, 2, 4)
+    plt.scatter(nivel_personalizacion, satisfaccion_cliente_4, color='purple')
+    plt.title('Nivel de Personalización vs. Satisfacción del Cliente')
+    plt.xlabel('Nivel de Personalización (%)')
+    plt.ylabel('Satisfacción del Cliente (0-100)')
+    plt.xlim(0, 100)
+    plt.ylim(0, 100)
+
+    plt.tight_layout()
+    plt.show()
+
+plot_example_relationships()
