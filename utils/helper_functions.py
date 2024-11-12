@@ -186,5 +186,3 @@ def plot_example_relationships():
 
     plt.tight_layout()
     plt.show()
-
-plot_example_relationships()
