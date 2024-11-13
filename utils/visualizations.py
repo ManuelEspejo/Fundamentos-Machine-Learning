@@ -52,5 +52,5 @@ def draw_neural_net(layers, node_size=500, arrowsize=10):
     
     plt.title('Red Neuronal Fully Connected')
     plt.axis('off')
-    plt.tight_layout()  # Ajuste automático del layout
+    plt.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
     plt.show()
