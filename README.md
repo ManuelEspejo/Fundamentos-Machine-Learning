@@ -1,4 +1,4 @@
-# 🌟🤖​🧠​ Introducción a Machine Learning para Profesionales 🧠🤖​​​🌟
+# Introducción a Machine Learning para Profesionales
 
 ¡Bienvenidos al repositorio de recursos de **Introducción a Machine Learning**! Este repositorio está diseñado para **profesionales de cualquier área** que quieran aprender las bases de Machine Learning de una manera **clara, accesible y práctica**. No necesitas experiencia técnica previa, solo curiosidad y ganas de aprender.
 
