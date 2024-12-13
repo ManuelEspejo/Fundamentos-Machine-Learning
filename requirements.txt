@@ -9,3 +9,4 @@ seaborn==0.13.2
 networkx==3.4.2
 gymnasium[classic_control]
 tensorflow==2.18.0
+shap==0.46.0
